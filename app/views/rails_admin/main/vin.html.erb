@@ -1,0 +1,22 @@
+<%= form_tag rails_admin.vin_url(@abstract_model.to_param), class: "form-horizontal" do |f| %>
+<form class="form-horizontal" method="POST">
+  <div class="control-group">
+    <label class="control-label" for="vinNmber">vinNumber</label>
+    <div class="controls">
+      <input type="text" id="VINNumber" name="vin" placeholder="VIN">
+    </div>
+  </div>
+  <button type="submit" class="btn">Submit</button>
+<% end %>
+<script type="text/javascript">
+  $('#VINNumber').change(function(){
+    var vin = $(this).val();
+    $.ajax({
+      url: "vin",
+      type: 'GET',
+      data: {vin: vin}
+      }).done(function(data) { 
+        console.log(data);
+      });
+    });
+</script>

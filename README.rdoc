@@ -1,0 +1,10 @@
+= RailsAdminVin
+
+The controller is in lib/rails_admin_vin.rb
+and the view is in app/views/rails_admin/main/vin.html.erb
+
+
+Now you have the controller and the view, you dont have the restriction of rails_admin but make sure you use the power of code...
+
+
+Remember the best code, is the code not written!
